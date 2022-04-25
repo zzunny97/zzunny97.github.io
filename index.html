@@ -1,0 +1,676 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>박형준 (Hyeongjun Park)</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="6a739cee-fd1f-4e64-b917-8d4b0e7407bf" class="page sans"><header><h1 class="page-title">박형준 (Hyeongjun Park)</h1></header><div class="page-body"><nav id="b488051b-1855-476b-9f06-ce9f80e3c249" class="block-color-gray table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#a7d98d59-8811-4c0f-b235-c4cc5e8251f8">🍀 About Me</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#a8d877f6-fd9b-42f7-b711-812b527aa0c9">🖋️ Education</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#ade1656c-3a5d-40fc-b8b2-ea316d4e942e">🔍 Study Interests</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#eb7d6e40-6dbe-41e8-8ee3-f4403886e971">🌎 Publications</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#4899c06e-f0ad-4989-9568-47c601aef6e0">🛠 Skills</a></div></nav><h2 id="a7d98d59-8811-4c0f-b235-c4cc5e8251f8" class="">🍀 About Me</h2><hr id="6f0f09f3-f578-4ff3-942d-804e8a747c34"/><div id="ad30b6b8-3891-4343-adc7-0c063e618caf" class="column-list"><div id="d9279fef-cc1e-4fea-8edb-d5b732b78780" style="width:25%" class="column"><figure id="8cb427bc-12fd-4771-b100-027df0395062" class="image"><a href="%E1%84%87%E1%85%A1%E1%86%A8%E1%84%92%E1%85%A7%E1%86%BC%E1%84%8C%E1%85%AE%E1%86%AB%20(Hyeongjun%20Park)%208cb427bc12fd4771b100027df0395062/CD_%EB%B0%98%EB%AA%85%ED%95%A8%EC%82%AC%EC%9D%B4%EC%A6%88.jpg"><img style="width:425px" src="%E1%84%87%E1%85%A1%E1%86%A8%E1%84%92%E1%85%A7%E1%86%BC%E1%84%8C%E1%85%AE%E1%86%AB%20(Hyeongjun%20Park)%208cb427bc12fd4771b100027df0395062/CD_%EB%B0%98%EB%AA%85%ED%95%A8%EC%82%AC%EC%9D%B4%EC%A6%88.jpg"/></a></figure></div><div id="c82e1814-a28a-40d5-84ea-2717274aef78" style="width:75.00000000000003%" class="column"><ul id="0107d83b-e90a-4187-907c-16eb080a79b2" class="bulleted-list"><li style="list-style-type:disc">🖥 Github: <a href="https://github.com/zzunny97">https://github.com/zzunny97</a></li></ul><ul id="28deebb8-c82d-40b6-ae63-d69c76411128" class="bulleted-list"><li style="list-style-type:disc">📬 Email: zzunny97@gmail.com</li></ul><ul id="08314e9e-58c9-4ac7-90f8-f3b712d172f1" class="bulleted-list"><li style="list-style-type:disc">📄 CV: <a href="https://zzunny97.github.io/CV.pdf">[link]</a></li></ul><p id="ebec4044-8d86-4170-bdd3-fe1734be2638" class="">I am interested in storage systems, database systems, big data frameworks</p><p id="0d994b7e-50d7-4ebd-a3f3-a4b6d78de118" class="">Currently serving mandatory military service (~2022. 07)</p></div></div><p id="780f4958-2444-4370-beee-64ad0f414087" class="">
+</p><h2 id="a8d877f6-fd9b-42f7-b711-812b527aa0c9" class="">🖋️ Education</h2><hr id="91bc774e-41c7-42ce-8fcf-0ad76ed82f7b"/><p id="20b27156-2870-4151-9161-1868b31505c2" class=""><strong>Sungkyunkwan University</strong></p><div id="00a5e010-4bd1-4629-8146-96cdadecac8e" class="column-list"><div id="51df13e2-d05b-4633-86e4-fe7864a4849e" style="width:75%" class="column"><ul id="9e752db2-6b2e-4b22-bb1c-e4b96e4065a1" class="bulleted-list"><li style="list-style-type:disc"><strong>B.S. in Computer Science and Engineering (소프트웨어학과)</strong><ul id="cf2d695b-1090-40bf-a35a-7aa2d1636d9f" class="bulleted-list"><li style="list-style-type:circle">GPA: 4.11/4.5, Major GPA: 4.23/4.5</li></ul><ul id="f3a9eed7-6f2f-484c-8e72-f86f3d848e56" class="bulleted-list"><li style="list-style-type:circle">성균소프트웨어장학금 (2017, 2018, 2019, 2020)</li></ul></li></ul></div><div id="38222ee2-64ac-4230-bd88-5ad62cb9708a" style="width:24.999999999999993%" class="column"><p id="8b5a0d69-dbb6-40eb-abd3-a4f279871d45" class=""><mark class="highlight-gray"><strong>2016.03 ~ &#x27;23.02</strong></mark></p></div></div><h2 id="ade1656c-3a5d-40fc-b8b2-ea316d4e942e" class="">🔍 Study Interests</h2><hr id="8049af5e-79ef-41f9-9377-cb194edb3205"/><ul id="5fcddc83-a24a-427c-9a51-abfce272b721" class="bulleted-list"><li style="list-style-type:disc">Big Data Processing Framework</li></ul><ul id="d8c0aa4b-ee8a-4a79-94e5-595635691d61" class="bulleted-list"><li style="list-style-type:disc">DBMS for Persistent Memory</li></ul><ul id="3abf6f40-0d31-40cc-9d18-7b9fdb322b22" class="bulleted-list"><li style="list-style-type:disc">Parallel Computing</li></ul><p id="4c2ef831-74d4-4f89-b141-c446c74f3223" class="">
+</p><h2 id="eb7d6e40-6dbe-41e8-8ee3-f4403886e971" class="">🌎 Publications</h2><hr id="af2950ab-b993-46d1-bcfe-1b059404a99c"/><ul id="65323b15-62be-4a06-8ad3-dc3e48a6d5b3" class="toggle"><li><details open=""><summary><strong>ListDB: Union of Write-Ahead Logs and SkipLists for Incremental Checkpointing on Persistent Memory</strong></summary><ul id="bfb53fd6-e757-48fd-92d4-61fc86f12f10" class="bulleted-list"><li style="list-style-type:disc">Wonbae Kim, Chanyeol Park, Dongui Kim, <strong>Hyeongjun Park</strong>, Young-ri Choi, Alan Sussman, Beomseok Nam</li></ul><ul id="359ea5c3-4e09-4829-be81-7c1128b3d4cb" class="bulleted-list"><li style="list-style-type:disc">To appear in the 16th USENIX Symposium on Operating Systems Design and Implementation (OSDI 2022), July. 2022.</li></ul><p id="d8ca74ff-e10d-46ad-acea-67bfd77ebc30" class="">
+</p></details></li></ul><ul id="256fab70-c1dd-4bbd-a166-8d5148272471" class="toggle"><li><details open=""><summary><strong>VeloxDFS: Streaming Access to Distributed Datasets to Reduce Disk Seeks [</strong><a href="https://fcrlab.unime.it/ccgrid22/"><strong>link</strong></a><strong>] [</strong><a href="https://github.com/DICL/VeloxDFS"><strong>code</strong></a><strong>]</strong></summary><ul id="0ebadc82-acde-49b6-aa44-057296cd7e4c" class="bulleted-list"><li style="list-style-type:disc">Sunghwan Ahn, <strong>Hyeongjun Park</strong>, V. A. Boleaz Sanchez, Deukyeon Hwang, Wonbae Kim, Alan Sussman, Beomseok Nam</li></ul><ul id="c54a983a-b363-4a25-8ded-61cffd34fed4" class="bulleted-list"><li style="list-style-type:disc"><strong>Co-first author</strong></li></ul><ul id="0538824b-579a-40c0-9632-1878cc803ad2" class="bulleted-list"><li style="list-style-type:disc">22nd IEEE/ACM International Symposium on Cluster, Cloud and Internet Computing (CCGrid 2022), May. 2022</li></ul><p id="4ec97bc7-2765-4ba3-a5ed-bf13d055a3da" class="">
+</p></details></li></ul><h2 id="4899c06e-f0ad-4989-9568-47c601aef6e0" class="">🛠 Skills</h2><hr id="92af085d-65b0-4923-8f3d-9056f89f5fea"/><p id="15ae00bc-0b90-47d9-866d-a14a7fed834d" class="">Framework:</p><p id="62cf171e-e14d-42d6-8463-fbb127d86930" class="">Hadoop, Spark, RocksDB, MySQL</p><p id="d52d06bd-46cc-4926-828c-d0bd94182bbe" class="">
+</p><p id="b019898a-d6bb-427a-9000-3e6f7231280d" class="">Language</p><p id="e7fdd425-a129-481e-a594-827e15f51b2d" class="">English (TOEIC 935 - 2020.11)</p><p id="7b71a62d-c579-43ed-aa46-1c5e7c35a8f5" class="">
+</p><p id="d3a03e6c-3d69-463a-a7a5-b22ce24f02cc" class="">Programming Language:</p><p id="7b08be2a-d2b4-4247-b05a-e64ceebc16c3" class="">C++ / C (Advanced), Shell Scripting (Advanced), Python (Intermediate), Java (Intermediate)</p><p id="fcb80e86-aac9-431b-ba17-3a0a34e52946" class="">
+</p></div></article></body></html>
